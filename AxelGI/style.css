@@ -1,0 +1,35 @@
+body{
+            background-color: firebrick;
+            margin: 0;
+        }
+
+
+section{
+    height: 100vh;
+    justify-content: center;
+    background-color: #4a8522;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#foto-principal{
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+
+h1{
+    color: greenyellow;
+    }
+
+p{
+    margin: 0 10vw 2vh 10vw;
+    text-align: justify;        
+}
+    
+.texto-destacado{
+    color: red;
+    font-weight: bold;
+}
