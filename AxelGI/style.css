@@ -43,13 +43,6 @@ li,a{
     font-size: 110%;
 }
 
-.links a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: greenyellow;
-    font-weight: bold;
-}
-
 a:link,
 a:visited {
     color: greenyellow;
