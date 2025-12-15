@@ -10,7 +10,7 @@ body{
 
 
 section{
-    height: 95vh;
+    max-height: 850px;
     max-width: 450px;
     display: flex;
     justify-content: center;
