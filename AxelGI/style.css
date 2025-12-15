@@ -10,7 +10,7 @@ body{
 
 
 section{
-    height: 90vh;
+    height: 95vh;
     max-width: 450px;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ section{
 }
 
 #foto-principal{
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 50%;
 }
 
