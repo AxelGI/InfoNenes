@@ -1,5 +1,4 @@
 body{
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,8 +7,12 @@ body{
     margin: 0;
 }
 
-main{
-  flex-direction: column;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;           
 }
 
 h2 {
@@ -23,7 +26,6 @@ ul {
   padding-left: 20px;
 }
 
-/* Selectores de clase */
 .container {
   display: flex;
   justify-content: center;
@@ -33,14 +35,16 @@ ul {
 
 .card {
   align-items: center;
-  background-color: #000;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  justify-content: end;
   max-width: 350px;
+  height: 700px;
   margin: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  background-color: #000;
+  box-shadow: 2px 2px 8px 5px rgb(255, 0, 140)
 }
 
 .card-img {
@@ -51,7 +55,7 @@ ul {
 
 .card-description {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: greenyellow;
   margin-bottom: 15px;
 }
@@ -92,7 +96,6 @@ ul {
   background-color: rgba(255, 0, 255, 0.5);
 }
 
-/* Selectores de ID */
 #proyecto1 {
   border: 2px solid #ddd;
 }
@@ -102,5 +105,16 @@ ul {
 }
 
 #btn-demo, #btn-code {
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 780px) {
+  main {
+    flex-direction: column;   
+    align-items: center;      
+  }
+
+  .card {
+    max-width: 90%;           
+  }
 }
