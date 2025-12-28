@@ -15,7 +15,7 @@ body {
     background-color: #2e2e2e;
     padding: 40px 60px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .menu h1 {
@@ -35,3 +35,6 @@ body {
     font-weight: bold;
 }
 
+.container{
+    
+}
