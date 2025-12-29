@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://adenilsongiovanini.com.br/blog/wp-content/webp-express/webp-images/uploads/2021/07/curvas-de-nivel-topografia-e-agrimensura-780x567.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20;
+    padding: 10;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #040025;
+    margin-bottom: 15px;
+}
+
+li {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #9bffe9d8;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 255, 191);
+    margin: 20px;
+    padding: 20px;
+}
+
+.imagen-proyecto {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.tecnologias {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.demo {
+    background-color: #1488d4;
+}
+
+.codigo {
+    background-color: #1fbb60;
+}
+
+#perfil-personal {
+    border-style:groove;
+    border-color: #96cc00b7;
+}
+
+#mapa-calor {
+    border-style:double;
+    border-color: darkcyan;
+}
