@@ -1,40 +1,72 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.menu {
-    text-align: center;
-    background-color: #2e2e2e;
-    padding: 40px 60px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+h1 {
+  margin: 20px;
+  color: #333;
 }
 
-.menu h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+/* Carrusel */
+.carousel {
+  height: 80vh;
+  width: 90%;
+  max-width: 600px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: white;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
+/* Elementos */
+.item {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  scroll-snap-align: start;
+  border-bottom: 1px solid #ddd;
 }
 
-.menu a {
-    color: #7CFC00;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+.item:nth-child(odd) {
+  background: #e0f7fa;
+}
+.item:nth-child(even) {
+  background: #ffe0b2;
 }
 
-.container{
-    
+/* Botón */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0078d7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #005a9e;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .item {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
