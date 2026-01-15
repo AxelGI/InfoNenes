@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,19 +11,28 @@ body {
 
 h1 {
   margin: 20px;
-  color: #333;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Contenedor */
+.carousel-container {
+  position: relative;
+  height: 80vh;
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden; /* ocultamos scroll */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* Carrusel */
 .carousel {
-  height: 80vh;
-  width: 90%;
-  max-width: 600px;
-  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
   scroll-snap-type: y mandatory;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  background: white;
+  overflow-y: hidden; /* ocultamos scroll */
+  position: relative;
 }
 
 /* Elementos */
@@ -34,14 +44,13 @@ h1 {
   justify-content: center;
   font-size: 2rem;
   scroll-snap-align: start;
-  border-bottom: 1px solid #ddd;
 }
 
 .item:nth-child(odd) {
-  background: #e0f7fa;
+  background: rgba(224, 247, 250, 0.9);
 }
 .item:nth-child(even) {
-  background: #ffe0b2;
+  background: rgba(255, 224, 178, 0.9);
 }
 
 /* Botón */
@@ -60,13 +69,23 @@ h1 {
   background: #005a9e;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .item {
-    font-size: 1.5rem;
-  }
-  .btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
+/* Flechas */
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.arrow.up {
+  top: 10px;
+}
+.arrow.down {
+  bottom: 10px;
 }
