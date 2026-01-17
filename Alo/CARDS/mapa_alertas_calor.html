@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d3182e4deec46a51408e2d3a6988ef3f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d3182e4deec46a51408e2d3a6988ef3f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d3182e4deec46a51408e2d3a6988ef3f = L.map(
+                "map_d3182e4deec46a51408e2d3a6988ef3f",
+                {
+                    center: [23.6345, -102.5528],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fda6dc186bcd272462b20e82d343533d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fda6dc186bcd272462b20e82d343533d.addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var marker_1f72aad2c39946af897a1b51d91f96ef = L.marker(
+                [25.6866, -100.3161],
+                {
+}
+            ).addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var icon_401d75b00d27fa896cb31565cf835eb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b6c41cd0b3a87d04dcc4a1aa1324383 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69885b5a8bf7ddfefa3f5bc112500284 = $(`<div id="html_69885b5a8bf7ddfefa3f5bc112500284" style="width: 100.0%; height: 100.0%;">Alerta de calor en Monterrey: 34°C</div>`)[0];
+                popup_0b6c41cd0b3a87d04dcc4a1aa1324383.setContent(html_69885b5a8bf7ddfefa3f5bc112500284);
+            
+        
+
+        marker_1f72aad2c39946af897a1b51d91f96ef.bindPopup(popup_0b6c41cd0b3a87d04dcc4a1aa1324383)
+        ;
+
+        
+    
+    
+                marker_1f72aad2c39946af897a1b51d91f96ef.setIcon(icon_401d75b00d27fa896cb31565cf835eb5);
+            
+    
+            var marker_515e12219b8760ab296540f4547212bd = L.marker(
+                [21.1619, -86.8515],
+                {
+}
+            ).addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var icon_c35abe3e28d05321e1e98154505590a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0de19e74941bc450446b4825535b9755 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2426cdd440e387acd935b995497da2ae = $(`<div id="html_2426cdd440e387acd935b995497da2ae" style="width: 100.0%; height: 100.0%;">Alerta de calor en Cancún: 38°C</div>`)[0];
+                popup_0de19e74941bc450446b4825535b9755.setContent(html_2426cdd440e387acd935b995497da2ae);
+            
+        
+
+        marker_515e12219b8760ab296540f4547212bd.bindPopup(popup_0de19e74941bc450446b4825535b9755)
+        ;
+
+        
+    
+    
+                marker_515e12219b8760ab296540f4547212bd.setIcon(icon_c35abe3e28d05321e1e98154505590a6);
+            
+    
+            var marker_e75503131a9b879e66fcbab95d7e2b9c = L.marker(
+                [20.9674, -89.5926],
+                {
+}
+            ).addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var icon_9cf8ae1ecd4e4db4e93cd5e5bc109a28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_baa761573b451ae068841dd77da07a93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53e8bdf6fe20255d17e3c3b33c5607a5 = $(`<div id="html_53e8bdf6fe20255d17e3c3b33c5607a5" style="width: 100.0%; height: 100.0%;">Alerta de calor en Mérida: 41°C</div>`)[0];
+                popup_baa761573b451ae068841dd77da07a93.setContent(html_53e8bdf6fe20255d17e3c3b33c5607a5);
+            
+        
+
+        marker_e75503131a9b879e66fcbab95d7e2b9c.bindPopup(popup_baa761573b451ae068841dd77da07a93)
+        ;
+
+        
+    
+    
+                marker_e75503131a9b879e66fcbab95d7e2b9c.setIcon(icon_9cf8ae1ecd4e4db4e93cd5e5bc109a28);
+            
+    
+            var marker_074b28c4d4abf2006f44b485bf7e386a = L.marker(
+                [20.6597, -103.3496],
+                {
+}
+            ).addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var icon_55b8015a44fee6a6371a63b243fbd66e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "yellow",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_254c1ac6d122aadc0f221b9e57533be1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a80c57ec7a79931ad60b9eb11d8246a = $(`<div id="html_5a80c57ec7a79931ad60b9eb11d8246a" style="width: 100.0%; height: 100.0%;">Alerta de calor en Guadalajara: 30°C</div>`)[0];
+                popup_254c1ac6d122aadc0f221b9e57533be1.setContent(html_5a80c57ec7a79931ad60b9eb11d8246a);
+            
+        
+
+        marker_074b28c4d4abf2006f44b485bf7e386a.bindPopup(popup_254c1ac6d122aadc0f221b9e57533be1)
+        ;
+
+        
+    
+    
+                marker_074b28c4d4abf2006f44b485bf7e386a.setIcon(icon_55b8015a44fee6a6371a63b243fbd66e);
+            
+    
+            var marker_172a7878ec18bf6073d2cbdbdefa69c8 = L.marker(
+                [32.5027, -117.0037],
+                {
+}
+            ).addTo(map_d3182e4deec46a51408e2d3a6988ef3f);
+        
+    
+            var icon_26b32c4b4cf200261c222899029dc60e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c425d9fafa2317c6855b3ba1d3cbedc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_061360b251d4b2e638282c04f02f123a = $(`<div id="html_061360b251d4b2e638282c04f02f123a" style="width: 100.0%; height: 100.0%;">Alerta de calor en Tijuana: 49°C</div>`)[0];
+                popup_c425d9fafa2317c6855b3ba1d3cbedc5.setContent(html_061360b251d4b2e638282c04f02f123a);
+            
+        
+
+        marker_172a7878ec18bf6073d2cbdbdefa69c8.bindPopup(popup_c425d9fafa2317c6855b3ba1d3cbedc5)
+        ;
+
+        
+    
+    
+                marker_172a7878ec18bf6073d2cbdbdefa69c8.setIcon(icon_26b32c4b4cf200261c222899029dc60e);
+            
+</script>
+</html>

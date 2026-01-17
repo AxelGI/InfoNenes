@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Contacto</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/31020300?v=4">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/31020300?v=4">
 </head>
+
 <body>
     <div class="container">
-        <h1 id="titulo-form">Formulario de Contacto</h1>
-        <form class="contact-form" id="form-contacto" novalidate>
-
+        <h1 id="titulo-form">Contacto</h1>
+        <form action="mailto:garcia.ibarra.axel5@gmail.com" method="post" enctype="text/plain" class="contact-form" id="form-contacto" novalidate>
 
         <!-- Nombre -->
         <label for="nombre">Nombre completo</label>
@@ -57,149 +58,4 @@
         </form>
     </div>
 </body>
-
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f9;
-    margin: 0;
-    padding: 0;
-}
-
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-
-input, textarea, select {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-/* Contenedor principal */
-.container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-
-/* Formulario */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Botones */
-.form-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-
-.btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-.enviar {
-    background: #4CAF50;
-    color: white;
-}
-
-
-.limpiar {
-    background: #f44336;
-    color: white;
-}
-
-
-/* Estados de validación */
-input:valid, textarea:valid, select:valid {
-    border-color: #4CAF50;
-}
-
-
-input:invalid, textarea:invalid, select:invalid {
-    border-color: #f44336;
-}
-
-
-/* Pseudoclases */
-.btn:hover {
-    opacity: 0.9;
-}
-
-
-input:focus {
-    outline: 2px solid #2196F3;
-}
-
-
-/* Pseudoelementos */
-label::after {
-    content: " *";
-    color: red;
-}
-
-
-h1::first-letter {
-    color: #2196F3;
-    font-size: 2rem;
-}
-
-
-/* Selectores de clase */
-.terminos {
-    display: flex;
-    margin-top: 15px;
-}
-
-
-.form-buttons {
-    gap: 10px;
-}
-
-
-.contact-form textarea {
-    min-height: 120px;
-}
-
-
-#titulo-form {
-    margin-bottom: 20px;
-}
-
-
-#btn-enviar, #btn-limpiar {
-    transition: background 0.3s ease;
-}
-
-
-</style>
 </html>
-
-
-
