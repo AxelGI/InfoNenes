@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro | Sistema</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="registro.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">Eventos<span class="accent">Pro</span></div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link active" href="registro.html">Registrar participante</a>
+      <a class="nav-link" href="participantes.html">Ver participantes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="register">
+      <h2>Registro de participante</h2>
+
+      <form class="register-form" novalidate>
+        <fieldset class="event-select">
+          <legend>Evento</legend>
+          <div class="field">
+            <label for="evento">Selecciona el evento</label>
+            <select id="evento" required>
+              <option value="">— Selecciona —</option>
+              <option value="dev-summit">Dev Summit CDMX 2026</option>
+              <option value="ux-taller">UX & UI Taller Intensivo</option>
+              <option value="data-meetup">Data & AI Meetup</option>
+              <option value="product-forum">Producto & Estrategia Forum</option>
+            </select>
+            <span class="error">Este campo es obligatorio</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="type-select">
+          <legend>Tipo de participante</legend>
+          <div class="type-options">
+            <label class="chip">
+              <input type="radio" name="tipo" value="asistente" checked />
+              <span>Asistente</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="tipo" value="ponente" />
+              <span>Ponente</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="common-fields">
+          <legend>Datos generales</legend>
+          <div class="grid-2">
+            <div class="field required">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" type="text" placeholder="Nombre y apellidos" required />
+              <span class="error">Ingresa tu nombre</span>
+            </div>
+            <div class="field required">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+              <span class="error">Ingresa un email válido</span>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" type="tel" placeholder="+52 ..." />
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa/Institución</label>
+              <input id="empresa" type="text" placeholder="Empresa o institución" />
+            </div>
+            <div class="field">
+              <label for="pais">País/Ciudad</label>
+              <input id="pais" type="text" placeholder="México, CDMX" />
+            </div>
+          </div>
+        </fieldset>
+
+        <section class="type-panels">
+          <!-- Panel Asistente -->
+          <input type="radio" id="tab-asistente" name="tab" checked hidden />
+          <input type="radio" id="tab-ponente" name="tab" hidden />
+          <div class="tabs">
+            <label for="tab-asistente" class="tab">Campos de asistente</label>
+            <label for="tab-ponente" class="tab">Campos de ponente</label>
+          </div>
+
+          <div class="panel panel-asistente">
+            <div class="grid-2">
+              <div class="field">
+                <label for="experiencia">Nivel de experiencia</label>
+                <select id="experiencia">
+                  <option>Junior</option>
+                  <option>Mid</option>
+                  <option>Senior</option>
+                  <option>Lead</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="interes">Áreas de interés</label>
+                <input id="interes" type="text" placeholder="Frontend, UX, Data..." />
+              </div>
+              <div class="field">
+                <label class="checkbox">
+                  <input type="checkbox" id="certificado" />
+                  <span>Requiere certificado</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-ponente">
+            <div class="grid-2">
+              <div class="field required">
+                <label for="titulo">Título de la ponencia</label>
+                <input id="titulo" type="text" placeholder="Título" />
+                <span class="error">Ingresa el título</span>
+              </div>
+              <div class="field">
+                <label for="duracion">Duración estimada</label>
+                <input id="duracion" type="text" placeholder="45 min" />
+              </div>
+              <div class="field">
+                <label for="req">Requerimientos técnicos</label>
+                <input id="req" type="text" placeholder="Proyector, HDMI, WiFi..." />
+              </div>
+              <div class="field">
+                <label for="bio">Biografía profesional</label>
+                <textarea id="bio" rows="3" placeholder="Resumen profesional..."></textarea>
+              </div>
+              <div class="field">
+                <label for="links">Redes sociales/links</label>
+                <input id="links" type="url" placeholder="https://linkedin.com/in/..." />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Registrar</button>
+          <a class="btn ghost" href="index.html">Cancelar</a>
+          <a class="btn" href="participantes.html">Ver participantes registrados</a>
+        </div>
+
+        <div class="form-feedback" aria-live="polite">
+          <div class="loading">Procesando registro…</div>
+          <div class="success">Registro exitoso. Puedes ver participantes del evento.</div>
+          <div class="error-global">Revisa los campos marcados en rojo.</div>
+        </div>
+      </form>
+
+      <div class="note">
+        La validación es visual (HTML5 + CSS). En producción se complementa con lógica de backend/JS.
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>© 2026 EventosPro</small>
+  </footer>
+
+  <!-- Con solo CSS: las pestañas se muestran/ocultan según el radio seleccionado.
+       Para sincronizar tipo de participante con pestañas, se usaría JS; aquí es demostrativo. -->
+</body>
+</html>
