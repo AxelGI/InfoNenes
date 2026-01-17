@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Participantes | Sistema</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="eventos.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">Eventos<span class="accent">Pro</span></div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="registro.html">Registrar participante</a>
+      <a class="nav-link active" href="participantes.html">Ver participantes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="event-info">
+      <h2>Dev Summit CDMX 2026</h2>
+      <p class="event-meta">
+        <span>📅 20 Feb 2026 — 09:00–18:00</span>
+        <span>📍 Coyoacán, CDMX</span>
+        <span class="badge cat-dev">Desarrollo</span>
+      </p>
+      <div class="counters">
+        <div class="counter">
+          <span class="label">Asistentes</span>
+          <span class="value">8</span>
+        </div>
+        <div class="counter">
+          <span class="label">Ponentes</span>
+          <span class="value">4</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="registro.html?evento=dev-summit">Registrar participante</a>
+      </div>
+    </section>
+
+    <section class="tabs-section">
+      <div class="tabs">
+        <input type="radio" id="tab1" name="tabs" checked />
+        <label for="tab1" class="tab">Asistentes</label>
+
+        <input type="radio" id="tab2" name="tabs" />
+        <label for="tab2" class="tab">Ponentes</label>
+
+        <input type="radio" id="tab3" name="tabs" />
+        <label for="tab3" class="tab">Estadísticas</label>
+      </div>
+
+      <div class="tab-panels">
+        <!-- Lista de Asistentes -->
+        <div class="panel">
+          <div class="list-controls">
+            <div class="field">
+              <label for="buscarA">Buscar</label>
+              <input id="buscarA" type="search" placeholder="Nombre, empresa..." />
+            </div>
+            <div class="field">
+              <label for="ordenA">Ordenar</label>
+              <select id="ordenA">
+                <option>Nombre A-Z</option>
+                <option>Fecha de registro</option>
+                <option>Experiencia</option>
+              </select>
+            </div>
+            <div class="toggle">
+              <label class="switch">
+                <input type="checkbox" />
+                <span>Vista compacta</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="table">
+            <div class="table-head">
+              <span>Nombre</span>
+              <span>Email</span>
+              <span>Empresa</span>
+              <span>Experiencia</span>
+              <span>Fecha registro</span>
+              <span>Acciones</span>
+            </div>
+            <!-- 8 asistentes -->
+            <div class="table-row attendee">
+              <span>María López</span>
+              <span>maria.lopez@example.com</span>
+              <span>Acme</span>
+              <span>Senior</span>
+              <span>2026-01-10</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Carlos Pérez</span>
+              <span>c.perez@example.com</span>
+              <span>Globant</span>
+              <span>Mid</span>
+              <span>2026-01-11</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Lucía Gómez</span>
+              <span>lucia.g@example.com</span>
+              <span>BBVA</span>
+              <span>Junior</span>
+              <span>2026-01-12</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Diego Ramírez</span>
+              <span>diego.r@example.com</span>
+              <span>MercadoLibre</span>
+              <span>Senior</span>
+              <span>2026-01-12</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Andrea Torres</span>
+              <span>andrea.t@example.com</span>
+              <span>Platzi</span>
+              <span>Mid</span>
+              <span>2026-01-13</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Jorge Salinas</span>
+              <span>jorge.s@example.com</span>
+              <span>Google</span>
+              <span>Lead</span>
+              <span>2026-01-13</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Paola Díaz</span>
+              <span>paola.d@example.com</span>
+              <span>Microsoft</span>
+              <span>Senior</span>
+              <span>2026-01-14</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+            <div class="table-row attendee">
+              <span>Héctor Núñez</span>
+              <span>hector.n@example.com</span>
+              <span>Wizeline</span>
+              <span>Mid</span>
+              <span>2026-01-14</span>
+              <span><button class="btn small">Ver detalles</button></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lista de Ponentes -->
+        <div class="panel">
+          <div class="list-controls">
+            <div class="field">
+              <label for="buscarP">Buscar</label>
+              <input id="buscarP" type="search" placeholder="Nombre, ponencia..." />
+            </div>
+            <div class="field">
+              <label for="ordenP">Ordenar</label>
+              <select id="ordenP">
+                <option>Nombre A-Z</option>
+                <option>Duración</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cards">
+            <!-- 4 ponentes -->
+            <article class="person-card speaker">
+              <header>
+                <h4>Ana Martínez <span class="badge main">Principal</span></h4>
+                <p class="subtitle">Arquitecta Frontend — Acme</p>
+              </header>
+              <p><strong>Ponencia:</strong> Escalando microfrontends</p>
+              <p><strong>Duración:</strong> 45 min</p>
+              <p class="bio">10 años construyendo plataformas web de alto tráfico.</p>
+              <div class="actions">
+                <button class="btn small">Ver detalles</button>
+              </div>
+            </article>
+
+            <article class="person-card speaker">
+              <header>
+                <h4>Bruno Castillo</h4>
+                <p class="subtitle">Tech Lead — Globant</p>
+              </header>
+              <p><strong>Ponencia:</strong> CI/CD para monorepos</p>
+              <p><strong>Duración:</strong> 30 min</p>
+              <p class="bio">Experto en pipelines y automatización.</p>
+              <div class="actions">
+                <button class="btn small">Ver detalles</button>
+              </div>
+            </article>
+
+            <article class="person-card speaker">
+              <header>
+                <h4>Elena Rivas</h4>
+                <p class="subtitle">Staff Engineer — BBVA</p>
+              </header>
+              <p><strong>Ponencia:</strong> Observabilidad en frontend</p>
+              <p><strong>Duración:</strong> 40 min</p>
+              <p class="bio">Apasionada de métricas y experiencia de usuario.</p>
+              <div class="actions">
+                <button class="btn small">Ver detalles</button>
+              </div>
+            </article>
+
+            <article class="person-card speaker">
+              <header>
+                <h4>Felipe Cruz</h4>
+                <p class="subtitle">Principal Engineer — MercadoLibre</p>
+              </header>
+              <p><strong>Ponencia:</strong> Patrones de rendimiento</p>
+              <p><strong>Duración:</strong> 35 min</p>
+              <p class="bio">Optimización y escalabilidad en grandes sistemas.</p>
+              <div class="actions">
+                <button class="btn small">Ver detalles</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="panel">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h4>Distribución por experiencia</h4>
+              <div class="bar-chart">
+                <div class="bar" style="--v:40%"><span>Junior</span></div>
+                <div class="bar" style="--v:25%"><span>Mid</span></div>
+                <div class="bar" style="--v:25%"><span>Senior</span></div>
+                <div class="bar" style="--v:10%"><span>Lead</span></div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h4>Distribución por ciudad</h4>
+              <ul class="dist-list">
+                <li><strong>CDMX:</strong> 60%</li>
+                <li><strong>GDL:</strong> 20%</li>
+                <li><strong>MTY:</strong> 10%</li>
+                <li><strong>Otros:</strong> 10%</li>
+              </ul>
+            </div>
+            <div class="stat-card">
+              <h4>Ratio asistentes/ponentes</h4>
+              <div class="ratio">
+                <div class="ratio-bar">
+                  <span class="attendees" style="--r:80%"></span>
+                  <span class="speakers" style="--r:20%"></span>
+                </div>
+                <p>80% asistentes / 20% ponentes</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h4>Registros por día</h4>
+              <div class="sparkline">
+                <span style="--h:20%"></span>
+                <span style="--h:40%"></span>
+                <span style="--h:60%"></span>
+                <span style="--h:30%"></span>
+                <span style="--h:50%"></span>
+                <span style="--h:70%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="hint">Gráficos simulados con CSS para la demo.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>© 2026 EventosPro</small>
+  </footer>
+</body>
+</html>
