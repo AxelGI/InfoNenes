@@ -1,91 +1,154 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background: url('fondo.jpg') no-repeat center center fixed;
-  background-size: cover;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f1f5f9;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
-h1 {
-  margin: 20px;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+/* Título principal */
+body > h1 {
+  margin: 30px 0 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #38bdf8;
+  letter-spacing: 1px;
 }
 
-/* Contenedor */
-.carousel-container {
-  position: relative;
-  height: 80vh;
-  width: 90%;
-  max-width: 600px;
-  overflow: hidden; /* ocultamos scroll */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* Carrusel */
-.carousel {
-  height: 100%;
+/* Menú */
+.menu {
   width: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: hidden; /* ocultamos scroll */
-  position: relative;
-}
-
-/* Elementos */
-.item {
-  height: 80vh;
+  max-width: 600px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  scroll-snap-align: start;
+  gap: 24px; /* separación entre cards */
 }
 
-.item:nth-child(odd) {
-  background: rgba(224, 247, 250, 0.9);
-}
-.item:nth-child(even) {
-  background: rgba(255, 224, 178, 0.9);
-}
-
-/* Botón */
-.btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #0078d7;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+/* Tarjeta base */
+.card {
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  background: #1e293b; /* color por defecto */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background: #005a9e;
-}
-
-/* Flechas */
-.arrow {
+/* Overlay para mejorar contraste si hay imagen */
+.card::before {
+  content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: inherit;
+  z-index: 0;
 }
 
-.arrow.up {
-  top: 10px;
+.card > * {
+  position: relative;
+  z-index: 1;
 }
-.arrow.down {
-  bottom: 10px;
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Título dentro de la tarjeta */
+.card h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+/* Lista */
+.card ul {
+  list-style: none;
+}
+
+.card li {
+  margin: 12px 0;
+}
+
+/* Enlaces estilo botón */
+.card a {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #f1f5f9;
+  background: #0ea5e9;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.card a:hover {
+  background: #0284c7;
+  transform: scale(1.03);
+}
+
+/* Variantes de color */
+.bg-red {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+.bg-green {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+.bg-blue {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+/* AxelGI*/
+.bg-axl {
+  background-color: #333;
+  background-image: url("https://avatars.githubusercontent.com/u/31020300?v=4");
+}
+.bg-axl h2 {
+  font-size: xx-large;
+  color: black;
+}
+
+.bg-axl a {
+  background-color: yellowgreen;
+}
+
+.bg-axl a:hover {
+  background-color: black;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body > h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card h1 {
+    font-size: 1.3rem;
+  }
+  .card a {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
 }
