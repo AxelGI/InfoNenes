@@ -1,9 +1,145 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eventos | Sistema</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="eventos.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">Eventos<span class="accent">Pro</span></div>
+    <nav class="nav">
+      <a class="nav-link active" href="index.html">Inicio</a>
+      <a class="nav-link" href="registro.html">Registrar participante</a>
+      <a class="nav-link" href="participantes.html">Ver participantes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <h2>Explorar eventos</h2>
+      <form class="filters-grid" aria-label="Filtros de eventos">
+        <div class="field">
+          <label for="buscar">Buscar por nombre</label>
+          <input id="buscar" type="search" placeholder="Ej. Summit, Taller..." />
+        </div>
+        <div class="field">
+          <label for="categoria">Categoría</label>
+          <select id="categoria">
+            <option value="">Todas</option>
+            <option>Desarrollo</option>
+            <option>Diseño</option>
+            <option>Data</option>
+            <option>Producto</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fecha">Fecha</label>
+          <input id="fecha" type="date" />
+        </div>
+        <div class="field">
+          <label for="orden">Ordenar por</label>
+          <select id="orden">
+            <option>Más recientes</option>
+            <option>Más participantes</option>
+            <option>Nombre A-Z</option>
+          </select>
+        </div>
+      </form>
+      <div class="hint">Los filtros son visuales (demo). En una versión con JS se aplicarían dinámicamente.</div>
+    </section>
+
+    <section class="events">
+      <article class="event-card" data-categoria="Desarrollo">
+        <div class="event-header">
+          <h3>Dev Summit CDMX 2026</h3>
+          <span class="badge cat-dev">Desarrollo</span>
+        </div>
+        <p class="event-meta">
+          <span>📅 20 Feb 2026 — 09:00–18:00</span>
+          <span>📍 Coyoacán, CDMX</span>
+        </p>
+        <p class="event-desc">Conferencia de desarrollo web y arquitectura frontend.</p>
+        <div class="event-stats">
+          <span class="stat">👥 48 participantes</span>
+          <span class="stat">🎤 6 ponentes</span>
+        </div>
+        <div class="event-actions">
+          <a class="btn ghost" href="participantes.html?evento=dev-summit">Ver detalles</a>
+          <a class="btn primary" href="registro.html?evento=dev-summit">Registrar participante</a>
+          <a class="btn" href="participantes.html?evento=dev-summit">Ver participantes</a>
+        </div>
+      </article>
+
+      <article class="event-card" data-categoria="Diseño">
+        <div class="event-header">
+          <h3>UX & UI Taller Intensivo</h3>
+          <span class="badge cat-design">Diseño</span>
+        </div>
+        <p class="event-meta">
+          <span>📅 05 Mar 2026 — 10:00–16:00</span>
+          <span>📍 Roma Norte, CDMX</span>
+        </p>
+        <p class="event-desc">Prácticas de prototipado, accesibilidad y sistemas de diseño.</p>
+        <div class="event-stats">
+          <span class="stat">👥 32 participantes</span>
+          <span class="stat">🎤 3 ponentes</span>
+        </div>
+        <div class="event-actions">
+          <a class="btn ghost" href="participantes.html?evento=ux-taller">Ver detalles</a>
+          <a class="btn primary" href="registro.html?evento=ux-taller">Registrar participante</a>
+          <a class="btn" href="participantes.html?evento=ux-taller">Ver participantes</a>
+        </div>
+      </article>
+
+      <article class="event-card" data-categoria="Data">
+        <div class="event-header">
+          <h3>Data & AI Meetup</h3>
+          <span class="badge cat-data">Data</span>
+        </div>
+        <p class="event-meta">
+          <span>📅 12 Mar 2026 — 18:30–21:00</span>
+          <span>📍 Polanco, CDMX</span>
+        </p>
+        <p class="event-desc">Charlas sobre MLOps, visualización y ética de datos.</p>
+        <div class="event-stats">
+          <span class="stat">👥 54 participantes</span>
+          <span class="stat">🎤 5 ponentes</span>
+        </div>
+        <div class="event-actions">
+          <a class="btn ghost" href="participantes.html?evento=data-meetup">Ver detalles</a>
+          <a class="btn primary" href="registro.html?evento=data-meetup">Registrar participante</a>
+          <a class="btn" href="participantes.html?evento=data-meetup">Ver participantes</a>
+        </div>
+      </article>
+
+      <article class="event-card" data-categoria="Producto">
+        <div class="event-header">
+          <h3>Producto & Estrategia Forum</h3>
+          <span class="badge cat-product">Producto</span>
+        </div>
+        <p class="event-meta">
+          <span>📅 22 Mar 2026 — 09:30–17:30</span>
+          <span>📍 Condesa, CDMX</span>
+        </p>
+        <p class="event-desc">Roadmaps, discovery y métricas de producto.</p>
+        <div class="event-stats">
+          <span class="stat">👥 41 participantes</span>
+          <span class="stat">🎤 4 ponentes</span>
+        </div>
+        <div class="event-actions">
+          <a class="btn ghost" href="participantes.html?evento=product-forum">Ver detalles</a>
+          <a class="btn primary" href="registro.html?evento=product-forum">Registrar participante</a>
+          <a class="btn" href="participantes.html?evento=product-forum">Ver participantes</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>© 2026 EventosPro — Demo sin JS, interacciones visuales con CSS</small>
+  </footer>
+</body>
 </html>
