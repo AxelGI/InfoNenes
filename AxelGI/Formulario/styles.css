@@ -1,5 +1,6 @@
 body {
-    background-image: url("https://img.freepik.com/fotos-premium/moderno-patron-neon-costura-colorido-patron-luces-neon_1299314-545.jpg");
+    /* background-image: url("https://img.freepik.com/fotos-premium/moderno-patron-neon-costura-colorido-patron-luces-neon_1299314-545.jpg"); */
+    background-color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -22,8 +23,16 @@ input, textarea, select {
     color: white;
     padding: 10px;
     margin-top: 5px;
-    border: 3px solid magenta;
-    border-radius: 5px;
+    border: 1px solid magenta;
+    border-radius: 35px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: magenta;
+    cursor: pointer;
 }
 
 /* Contenedor principal */
