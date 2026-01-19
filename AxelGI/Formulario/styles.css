@@ -98,7 +98,7 @@ select:valid {
 input:invalid,
 textarea:invalid,
 select:invalid {
-  border-color: #08ff32;
+  border-color: red;
 }
 
 .btn:hover {
@@ -114,7 +114,6 @@ input:focus {
 }
 
 label::after {
-  content: " *";
   color: #08ff32;
 }
 
