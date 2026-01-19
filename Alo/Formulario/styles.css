@@ -1,0 +1,188 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/bd/c4/78/bdc4781af711f4a6137a82b76630cafb.png);
+    font-family:"Buda", serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+.buda-light {
+    font-family: "Buda", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.container {
+    display:flex;
+    background-color: #fffdf7bd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(3, 3, 3, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+    width: 1080px;
+    align-items: stretch;
+}
+
+.container img {
+    width: 55%;
+    height: auto;
+    object-fit:cover;
+}
+
+form {
+    flex:1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Inputs y textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #b3935475;
+    border-style:solid;
+    box-sizing: border-box;
+}
+
+/* Textarea mensaje */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+textarea::placeholder {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Checkbox de términos */
+.terminos {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.terminos input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.terminos::after{
+    content:" *";
+    color: #d41919;
+}
+
+/* Botones */
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: scale(1.05);
+}
+
+input[type="submit"] {
+    background-color: #034469;
+    color: #fff;
+    margin-right: 10px;
+}
+
+input[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+    margin-right: 10px;
+}
+
+/*Cambio al hacer click */
+
+input[type="submit"]:active {
+    background-color: #5ba51e;
+}
+
+input[type="reset"]:active {
+    background-color: #eeea19;
+}
+
+/*Redes sociales */
+.social-media {
+    display: flex;
+    align-items:center;
+    gap: 15px;
+}
+
+.social-media span {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.social-media a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease;
+}
+
+/* Facebook */
+.social-media .facebook {
+    background-image: url("https://www.svgrepo.com/show/506477/facebook.svg");
+}
+
+/* Instagram */
+.social-media .instagram {
+    background-image: url("https://www.svgrepo.com/show/520798/instagram.svg");
+}
+
+/* Tiktok */
+.social-media .tiktok {
+    background-image: url("https://www.svgrepo.com/show/333611/tiktok.svg");
+}
+
+.social-media a:hover {
+    transform: scale(1.15);
+}
+
+
+/* Selectores de ID */
+#formulario-contacto {
+    max-width: 500px;
+}
+
+#redes-sociales {
+    margin-top: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container img {
+        width: 100%;
+        height: 200px;
+    }
+}
