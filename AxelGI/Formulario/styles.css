@@ -1,135 +1,146 @@
+@font-face {
+  font-family: "Matrix";
+  src: url("../fonts/matrix.ttf") format("truetype");
+}
+
 body {
-    /* background-image: url("https://img.freepik.com/fotos-premium/moderno-patron-neon-costura-colorido-patron-luces-neon_1299314-545.jpg"); */
-    background-color: #333;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Matrix", sans-serif;
+  background-image: url("../img/matrix.gif");
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 h1 {
-    text-align: center;
-    color: greenyellow;
+  text-align: center;
+  color: #08ff32;
 }
-
+h3 {
+  text-align: center;
+  color: white;
+}
 label {
-    color: greenyellow;
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+  color: #08ff32;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-input, textarea, select {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid magenta;
-    border-radius: 35px;
+input,
+textarea,
+select {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #08ff32;
+  border-radius: 15px;
 }
 
 input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-    accent-color: magenta;
-    cursor: pointer;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  accent-color: #08ff32;
+  cursor: pointer;
 }
 
-/* Contenedor principal */
 .container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #000000bd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  padding: 20px;
+  background: #000000bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulario */
 .contact-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Botones */
 .form-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .enviar {
-    background: greenyellow;
-    color: #222 ;
+  background: #08ff32;
+  color: black;
 }
-
 
 .limpiar {
-    background: magenta;
-    color: #222;
+  background: #08ff32;
+  color: black;
 }
 
-/* Estados de validación */
-input:valid, textarea:valid, select:valid {
-    border-color: #4CAF50;
-    background-color: black;
-    color: white;
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: #4caf50;
+  background-color: black;
+  color: white;
 }
 
-input:invalid, textarea:invalid, select:invalid {
-    border-color: magenta;
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: #08ff32;
 }
 
-/* Pseudoclases */
 .btn:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 input:focus {
-    outline: 3px solid greenyellow;
+  outline: 3px solid #08ff32;
 }
 
-::placeholder{
-    color: white;
+::placeholder {
+  color: white;
 }
 
-/* Pseudoelementos */
 label::after {
-    content: " *";
-    color: magenta;
+  content: " *";
+  color: #08ff32;
 }
 
 h1::first-letter {
-    color: magenta;
-    font-size: 2rem;
+  color: #08ff32;
+  font-size: 2rem;
 }
 
-/* Selectores de clase */
 .terminos {
-    display: flex;
-    margin-top: 15px;
+  display: flex;
+  margin-top: 15px;
 }
 
 .form-buttons {
-    gap: 10px;
+  gap: 10px;
 }
 
 .contact-form textarea {
-    min-height: 50px;
+  min-height: 50px;
 }
 
 #titulo-form {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-#btn-enviar, #btn-limpiar {
-    transition: background 0.3s ease;
+#btn-enviar,
+#btn-limpiar {
+  transition: background 0.3s ease;
 }
