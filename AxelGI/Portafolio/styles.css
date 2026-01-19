@@ -1,56 +1,64 @@
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: round;
-    background-image: url(https://img.freepik.com/vector-gratis/tema-oscuro-fondo-abstracto-textura-marmol_474888-4936.jpg?semt=ais_hybrid&w=740&q=80);
-    margin: 0;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: round;
+  background-image: url(https://img.freepik.com/vector-gratis/tema-oscuro-fondo-abstracto-textura-marmol_474888-4936.jpg?semt=ais_hybrid&w=740&q=80);
+  margin: 0;
 }
 
-
-section{
-    max-height: 850px;
-    max-width: 450px;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: #000;
-    flex-direction: column;
-    align-items: center;
-    border: 5px solid greenyellow;
-    border-radius: 25px;
+section {
+  max-height: 850px;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #000;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid greenyellow;
+  border-radius: 25px;
 }
 
-#foto-principal{
-    max-width: 250px;
-    border-radius: 50%;
+#foto-principal {
+  max-width: 250px;
+  border-radius: 50%;
 }
 
-p,li{
-    font-size: 130%;
-    color: white;
-    margin: 0 5vw;
-    text-align: justify;        
-}
-    
-.texto-destacado, h1{
-    color: greenyellow;
-    font-weight: bold;
+.cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-li,a{
-    font-size: 110%;
+p,
+li {
+  font-size: 130%;
+  color: white;
+  margin: 0 5vw;
+  text-align: justify;
+}
+
+.texto-destacado,
+h1 {
+  color: greenyellow;
+  font-weight: bold;
+}
+
+li,
+a {
+  font-size: 110%;
 }
 
 a:link,
 a:visited {
-    color: greenyellow;
-    text-decoration: none;
+  color: greenyellow;
+  text-decoration: none;
 }
 
 .redes {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
