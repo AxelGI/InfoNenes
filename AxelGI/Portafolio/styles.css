@@ -9,7 +9,7 @@ body {
 }
 
 section {
-  max-height: 850px;
+  /* max-height: 850px; */
   max-width: 450px;
   display: flex;
   justify-content: center;
