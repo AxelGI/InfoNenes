@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Participantes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/registro.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎧 Sistema de Eventos</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="registro.html" class="activo">Registrar Participante</a>
+          </li>
+          <li><a href="participantes.html">Ver Participantes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="registro">
+      <h2>Formulario de Registro</h2>
+      <form>
+        <!-- Selección de evento -->
+        <label>Evento</label>
+        <select required>
+          <option value="">Selecciona un evento</option>
+          <option value="dj-night">DJ Night</option>
+          <option value="tech-conf">Conferencia Tech</option>
+        </select>
+
+        <!-- Tipo de participante -->
+        <label>Tipo de participante</label>
+        <select required>
+          <option value="">Selecciona</option>
+          <option value="asistente">Asistente</option>
+          <option value="ponente">Ponente</option>
+        </select>
+
+        <!-- Campos comunes -->
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Teléfono" required />
+        <input type="text" placeholder="Empresa/Institución" required />
+        <input type="text" placeholder="País/Ciudad" required />
+
+        <!-- Campos específicos para asistentes -->
+        <input type="text" placeholder="Nivel de experiencia" />
+        <input type="text" placeholder="Áreas de interés" />
+        <label><input type="checkbox" /> Requiere certificado</label>
+
+        <!-- Campos específicos para ponentes -->
+        <input type="text" placeholder="Título de la ponencia" />
+        <input type="text" placeholder="Duración estimada" />
+        <input type="text" placeholder="Requerimientos técnicos" />
+        <textarea placeholder="Biografía profesional"></textarea>
+        <input type="url" placeholder="Redes sociales/links" />
+
+        <!-- Acciones -->
+        <button type="submit">Registrar</button>
+        <button type="reset">Cancelar</button>
+        <a href="participantes.html">Ver participantes registrados</a>
+      </form>
+    </section>
+  </body>
+</html>

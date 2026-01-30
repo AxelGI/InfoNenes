@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participantes</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/participantes.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🎧 Sistema de Eventos</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="registro.html">Registrar Participante</a></li>
+          <li>
+            <a href="participantes.html" class="activo">Ver Participantes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="participantes">
+      <h2>Participantes del Evento: DJ Night</h2>
+      <p>Asistentes: 5 | Ponentes: 5</p>
+
+      <!-- Pestañas -->
+      <div class="tabs">
+        <button class="tab activo">Asistentes</button>
+        <button class="tab">Ponentes</button>
+      </div>
+
+      <!-- Lista de asistentes -->
+      <!-- Lista de asistentes --> <div class="lista asistentes"> <table> <tr><th>Nombre</th><th>Email</th><th>Empresa</th><th>Nivel</th><th>Fecha</th></tr> <tr><td>Juan Pérez</td><td>juan@mail.com</td><td>Empresa X</td><td>Intermedio</td><td>28/01/2026</td></tr> <tr><td>María Gómez</td><td>maria@mail.com</td><td>Startup Y</td><td>Avanzado</td><td>28/01/2026</td></tr> <tr><td>Carlos Ruiz</td><td>carlos@mail.com</td><td>Universidad ICEL</td><td>Básico</td><td>29/01/2026</td></tr> <tr><td>Laura Sánchez</td><td>laura@mail.com</td><td>Agencia Creativa</td><td>Intermedio</td><td>29/01/2026</td></tr> <tr><td>Pedro Hernández</td><td>pedro@mail.com</td><td>Freelancer</td><td>Avanzado</td><td>29/01/2026</td></tr> </table> </div> <!-- Lista de ponentes --> <div class="lista ponentes" style="display:none;"> <table> <tr><th>Nombre</th><th>Ponencia</th><th>Duración</th><th>Empresa</th><th>Biografía</th></tr> <tr><td>Ana López</td><td>Producción Musical</td><td>45 min</td><td>MusicLab</td><td>DJ y productora con 10 años de experiencia</td></tr> <tr><td>José Martínez</td><td>Innovación Tech</td><td>30 min</td><td>TechCorp</td><td>Ingeniero en sistemas especializado en música digital</td></tr> <tr><td>Sofía Torres</td><td>DJ Sets Internacionales</td><td>60 min</td><td>Global Beats</td><td>DJ invitada de festivales internacionales</td></tr> <tr><td>Ricardo Díaz</td><td>Electrónica y Hardware</td><td>40 min</td><td>MakerSpace</td><td>Experto en Arduino y producción musical</td></tr> <tr><td>Fernanda Aguilar</td><td>Marketing Musical</td><td>35 min</td><td>Agencia Z</td><td>Consultora en branding y música</td></tr> </table> </div>
+        </table>
+      </div>
+    </section>
+
+   <script>
+  const tabs = document.querySelectorAll(".tabs .tab");
+  const asistentes = document.querySelector(".lista.asistentes");
+  const ponentes = document.querySelector(".lista.ponentes");
+
+  function ocultarTodo() {
+    asistentes.style.display = "none";
+    ponentes.style.display = "none";
+    tabs.forEach(tab => tab.classList.remove("activo"));
+  }
+
+  tabs[0].addEventListener("click", () => {
+    ocultarTodo();
+    asistentes.style.display = "block";
+    tabs[0].classList.add("activo");
+  });
+
+  tabs[1].addEventListener("click", () => {
+    ocultarTodo();
+    ponentes.style.display = "block";
+    tabs[1].classList.add("activo");
+  });
+</script>
+
+
+  </body>
+</html>

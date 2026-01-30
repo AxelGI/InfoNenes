@@ -1,0 +1,29 @@
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.producto {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto h2 {
+  color: #006400;
+}
+
+.acciones a {
+  display: inline-block;
+  margin: 5px;
+  padding: 0.5rem;
+  background: #006400;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.acciones a:hover {
+  background: #228b22;
+}

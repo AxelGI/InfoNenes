@@ -1,0 +1,55 @@
+/* Fuente y colores base */
+body {
+  font-family: "Orbitron", sans-serif;
+  background: radial-gradient(circle at top, #0f0f0f, #1a1a1a);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header y navegación */
+header {
+  background: #000;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 15px #ff007f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #ff007f;
+  text-shadow: 0 0 10px #ff007f;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.activo {
+  background: #ff007f;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

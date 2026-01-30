@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Eventos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/eventos.css" />
+  </head>
+  <body>
+    <!-- Header común -->
+    <header>
+      <h1>🎧 Sistema de Eventos</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="registro.html">Registrar Participante</a></li>
+          <li><a href="participantes.html">Ver Participantes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Filtros -->
+    <section class="filtros">
+      <input type="text" placeholder="Buscar evento..." />
+      <select>
+        <option value="">Categoría</option>
+        <option value="dj">DJ Sets</option>
+        <option value="conferencia">Conferencias</option>
+        <option value="taller">Talleres</option>
+      </select>
+      <input type="date" />
+      <select>
+        <option value="">Ordenar por</option>
+        <option value="recientes">Más recientes</option>
+        <option value="participantes">Más participantes</option>
+        <option value="az">Nombre A-Z</option>
+      </select>
+    </section>
+
+    <!-- Lista de eventos -->
+
+      <section class="eventos">
+        <!-- Evento 1 -->
+        <div class="evento">
+          <h2>DJ Night</h2>
+          <p><strong>Fecha:</strong> 15 Febrero 2026</p>
+          <p><strong>Lugar:</strong> Foro Indie Rocks</p>
+          <p>Una noche de música electrónica con DJs locales.</p>
+          <p>Participantes: 120 | Ponentes: 3</p>
+          <p>Categoría: DJ</p>
+          <div class="acciones">
+            <a href="#">Ver Detalles</a>
+            <a href="registro.html">Registrar Participante</a>
+            <a href="participantes.html">Ver Participantes</a>
+          </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="evento">
+          <h2>Conferencia Tech</h2>
+          <p><strong>Fecha:</strong> 20 Marzo 2026</p>
+          <p><strong>Lugar:</strong> Centro de Convenciones CDMX</p>
+          <p>Charla sobre innovación tecnológica y música digital.</p>
+          <p>Participantes: 80 | Ponentes: 5</p>
+          <p>Categoría: Conferencia</p>
+          <div class="acciones">
+            <a href="#">Ver Detalles</a>
+            <a href="registro.html">Registrar Participante</a>
+            <a href="participantes.html">Ver Participantes</a>
+          </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="evento">
+          <h2>Taller Producción Musical</h2>
+          <p><strong>Fecha:</strong> 5 Abril 2026</p>
+          <p><strong>Lugar:</strong> Universidad ICEL</p>
+          <p>Aprende a producir tus propios beats con software profesional.</p>
+          <p>Participantes: 60 | Ponentes: 2</p>
+          <p>Categoría: Taller</p>
+          <div class="acciones">
+            <a href="#">Ver Detalles</a>
+            <a href="registro.html">Registrar Participante</a>
+            <a href="participantes.html">Ver Participantes</a>
+          </div>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="evento">
+          <h2>Festival Electrónico</h2>
+          <p><strong>Fecha:</strong> 10 Mayo 2026</p>
+          <p><strong>Lugar:</strong> Parque Bicentenario</p>
+          <p>Festival con múltiples escenarios y artistas internacionales.</p>
+          <p>Participantes: 200 | Ponentes: 8</p>
+          <p>Categoría: Festival</p>
+          <div class="acciones">
+            <a href="#">Ver Detalles</a>
+            <a href="registro.html">Registrar Participante</a>
+            <a href="participantes.html">Ver Participantes</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Repite mínimo 4 eventos -->
+    </section>
+  </body>
+</html>

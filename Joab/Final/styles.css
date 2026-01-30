@@ -1,0 +1,105 @@
+/* Formulario DJ Neon */
+#contacto {
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 25px #ff007f;
+}
+
+#contacto h2 {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* Inputs */
+#form-dj input,
+#form-dj select,
+#form-dj textarea {
+  background: #000;
+  color: #fff;
+  border: 2px solid #444;
+  transition: all 0.3s ease;
+}
+
+#form-dj input:focus,
+#form-dj select:focus,
+#form-dj textarea:focus {
+  border-color: #ff007f;
+  box-shadow: 0 0 10px #ff007f;
+  outline: none;
+}
+
+/* Botones neon */
+.btn-neon-pink {
+  background: #ff007f;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ff007f;
+  transition: transform 0.2s ease;
+}
+
+.btn-neon-blue {
+  background: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00f0ff;
+  transition: transform 0.2s ease;
+}
+
+.btn-neon-pink:hover,
+.btn-neon-blue:hover {
+  transform: scale(1.05);
+}
+
+/* Labels en blanco */
+#form-dj label,
+#contacto h2 {
+  color: #fff;
+}
+
+/* Texto dentro de inputs, selects y textarea en blanco */
+#form-dj input,
+#form-dj select,
+#form-dj textarea {
+  color: #fff;
+}
+
+/* Placeholders en blanco */
+#form-dj input::placeholder,
+#form-dj textarea::placeholder {
+  color: #fff;
+  opacity: 0.8; /* un poco más tenue para diferenciar */
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid #00f0ff;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: #ff007f;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+.timeline h5 {
+  color: #ff007f;
+}
+
+.timeline ul {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.timeline li ul li {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}

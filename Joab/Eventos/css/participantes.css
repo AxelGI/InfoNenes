@@ -1,0 +1,88 @@
+.participantes {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.participantes h2 {
+  text-align: center;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+  margin-bottom: 1rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background: #444;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.activo {
+  background: #ff007f;
+  box-shadow: 0 0 10px #ff007f;
+}
+
+.tab:hover {
+  transform: scale(1.05);
+}
+
+/* Listas */
+.lista table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lista th,
+.lista td {
+  padding: 0.7rem;
+  border-bottom: 1px solid #444;
+  text-align: left;
+}
+
+.lista th {
+  background: #222;
+  color: #00f0ff;
+}
+
+.lista tr:hover {
+  background: rgba(255, 0, 127, 0.2);
+}
+
+/* Responsive tablas */
+@media (max-width: 768px) {
+  .lista table,
+  .lista thead,
+  .lista tbody,
+  .lista th,
+  .lista td,
+  .lista tr {
+    display: block;
+  }
+
+  .lista tr {
+    margin-bottom: 1rem;
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .lista td {
+    border: none;
+    padding: 0.3rem 0;
+  }
+
+  .lista th {
+    display: none;
+  }
+}
