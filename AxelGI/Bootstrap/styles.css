@@ -1,0 +1,446 @@
+:root {
+  --primary-color: #83db00;
+  --secondary-color: #ff00ff;
+  --dark-bg: #0a0a0a;
+  --card-bg: #1a1a1a;
+  --text-color: #f0f0f0;
+  --text-muted: #aaaaaa;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 56px;
+  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWw2eXF4eXRzYzdwcmxpZHNoMzI4NmgxZGVzcmV4dHRobHJ6cDJhNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/AOSwwqVjNZlDO/giphy.gif");
+  color: var(--text-color);
+}
+
+/* Navbar con efecto neón */
+.navbar {
+  background-color: rgba(10, 10, 10, 0.95) !important;
+  border-bottom: 1px solid var(--primary-color);
+  box-shadow:
+    0 0 10px var(--primary-color),
+    0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 5px var(--secondary-color);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color) !important;
+  transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Jumbotron con efecto neón */
+.jumbotron {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  box-shadow:
+    0 0 15px rgba(255, 0, 255, 0.2),
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow:
+    0 0 15px var(--primary-color),
+    0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+/* Títulos de sección con efecto neón */
+.section-title {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50px;
+  height: 2px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+/* Cards con efecto neón */
+.card {
+  transition: transform 0.3s;
+  height: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow:
+    0 5px 15px rgba(255, 0, 255, 0.3),
+    0 0 20px rgba(255, 0, 255, 0.1) !important;
+}
+
+/* Botones neón */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  text-shadow: 0 0 2px white;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.btn-primary:hover {
+  background-color: #e600e6;
+  border-color: #e600e6;
+  box-shadow:
+    0 0 15px var(--primary-color),
+    0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Skill icons */
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 3px solid var(--card-bg);
+  box-shadow:
+    0 0 0 3px var(--primary-color),
+    0 0 10px var(--primary-color);
+}
+
+.timeline-date {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 3px var(--secondary-color);
+}
+
+/* Progress bars neón */
+.progress {
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Tech list */
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-list li {
+  background-color: rgba(173, 255, 47, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  border: 1px solid rgba(173, 255, 47, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #0a0a0a;
+  border-top: 1px solid var(--primary-color);
+  box-shadow: 0 -5px 15px rgba(255, 0, 255, 0.1);
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  margin-right: 10px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Formulario */
+.contact-form .form-control,
+.contact-form .form-select {
+  background-color: #1a1a1a;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  background-color: #1a1a1a;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  color: var(--text-color);
+}
+
+.contact-form .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.contact-form .input-group-text {
+  background-color: #2a2a2a;
+  border: 1px solid var(--border-color);
+  color: var(--secondary-color);
+  border-right: none;
+}
+
+.contact-form .form-control:focus + .input-group-text {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.contact-form .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.contact-form .form-check-label {
+  color: var(--text-color);
+  margin-left: 5px;
+}
+
+.contact-form .form-check-label a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.contact-form .form-check-label a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Borde neón para el formulario */
+.neon-border {
+  border: 1px solid var(--primary-color);
+  box-shadow:
+    0 0 15px rgba(255, 0, 255, 0.2),
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+}
+
+/* Estilos para el select */
+.contact-form select.form-select {
+  background-color: #1a1a1a;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.contact-form select.form-select option {
+  background-color: #2a2a2a;
+  color: var(--text-color);
+}
+
+.contact-form select.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+/* Efecto de validación */
+.contact-form .form-control:valid,
+.contact-form .form-select:valid {
+  border-color: var(--secondary-color);
+  background-color: rgba(173, 255, 47, 0.05);
+}
+
+.contact-form .form-control:invalid:not(:focus):not(:placeholder-shown),
+.contact-form .form-select:invalid:not(:focus) {
+  border-color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.05);
+}
+
+/* Botones del formulario mejorados */
+.contact-form .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #e600e6;
+  border-color: #e600e6;
+  box-shadow: 0 0 20px var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.contact-form .btn-outline-secondary {
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+.contact-form .btn-outline-secondary:hover {
+  background-color: #333;
+  border-color: var(--secundary-color);
+  color: var(--secundary-color);
+}
+
+.text-secondary {
+  animation: matrixGlow 3s infinite alternate;
+}
+
+/* Modal neón */
+.modal-content {
+  background-color: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.modal-header {
+  border-bottom: 1px solid #444;
+}
+
+.modal-footer {
+  border-top: 1px solid #444;
+}
+
+/* Efectos de texto neón */
+.text-primary {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 3px rgba(255, 0, 255, 0.5);
+}
+
+.text-bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Badges neón */
+.badge.bg-primary {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+.badge.bg-secondary {
+  background-color: var(--secondary-color) !important;
+  color: #000 !important;
+  box-shadow: 0 0 8px rgba(173, 255, 47, 0.5);
+}
+
+/* Enlaces */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Proyectos img */
+.project-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 2rem 1rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
